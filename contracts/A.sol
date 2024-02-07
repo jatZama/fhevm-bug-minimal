@@ -9,7 +9,6 @@ contract A {
     constructor() {}
 
     function requestDecryption(euint32 ct) external {
-        require(TFHE.isInitialized(ct), "Ciphertext is not initialized");
         euint32 ct_r = TFHE.shl(ct, 0);
     }
 
